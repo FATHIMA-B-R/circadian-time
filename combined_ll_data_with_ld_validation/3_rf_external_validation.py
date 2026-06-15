@@ -126,7 +126,7 @@ if np.std(pred_ct) > 0:
     from scipy.stats import pearsonr
     print("Pearson R    :", pearsonr(true_ct, pred_ct)[0])
 else:
-    print("Pearson R    : undefined (constant predictions)")
+    print("Pearson R    : constant predictions")
 
 # =====================================================
 # SAVE

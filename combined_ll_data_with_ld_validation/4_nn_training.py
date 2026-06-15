@@ -90,7 +90,7 @@ def build_model(input_dim):
     return model
 
 # =====================================
-# SAFETY NORMALIZATION
+# NORMALIZATION
 # =====================================
 def safe_normalize(x):
     norm = np.linalg.norm(x, axis=1, keepdims=True)

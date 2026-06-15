@@ -33,7 +33,7 @@ X = df.drop(columns=["SampleID", "CT"])
 y = df["CT"].values
 
 # =====================================
-# FEATURE SELECTION (FROM TRAINING ONLY)
+# FEATURE SELECTION
 # =====================================
 variances = X.var()
 top_genes = variances.sort_values(ascending=False).head(15).index
@@ -55,7 +55,7 @@ def xy_to_ct(xy):
 y_xy = ct_to_xy(y)
 
 # =====================================
-# SCALER (FIT ON FULL DATA)
+# SCALER
 # =====================================
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
